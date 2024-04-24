@@ -10,6 +10,13 @@ void printf(char* str)
 
 }
 
+typedef void (*constructor)(); //we are defining linker variables in .cpp
+extern "C" constructor start_ctors;
+extern "C" constructor end_ctors;
+extern "C" void callConstructors(){ //called in loader.s
+    for(constructor* i = &start_ctors; i != end_ctors; i++)
+        (*i)();
+}
 
 extern "C" void kernelMain(void* multiboot_structure, unsigned int magicnumber)
 {
