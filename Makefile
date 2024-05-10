@@ -20,7 +20,7 @@ mykernel.iso: mykernel.bin
 	mkdir iso
 	mkdir iso/boot
 	mkdir iso/boot/grub
-	cp S< iso/boot/
+	cp $< iso/boot/
 	echo 'set timeout=0' >> iso/boot/grub/grub.cfg
 	echo 'set default=0' >> iso/boot/grub/grub.cfg
 	echo '' >> iso/boot/grub/grub.cfg

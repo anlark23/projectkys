@@ -14,7 +14,7 @@ typedef void (*constructor)(); //we are defining linker variables in .cpp
 extern "C" constructor start_ctors;
 extern "C" constructor end_ctors;
 extern "C" void callConstructors(){ //called in loader.s
-    for(constructor* i = &start_ctors; i != end_ctors; i++)
+    for(constructor* i = &start_ctors; i != &end_ctors; i++) //The nitwit forgot & in end_ctors
         (*i)();
 }
 
