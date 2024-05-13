@@ -31,3 +31,6 @@ mykernel.iso: mykernel.bin
 	grub-mkrescue --output=$@ iso #stupid man's notation its not "grub." its "grub-"
 	rm -rf iso
 
+.PHONY: clean
+clean:
+	rm -f $(objects) mykernel.bin mykernel.iso
