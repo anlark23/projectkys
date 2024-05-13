@@ -18,7 +18,7 @@ Port8Bit::Port8Bit(uint16_t portnumber):Port(portnumber){
 
 
 }
-Port8Bit::~Port8Bit();{
+Port8Bit::~Port8Bit(){
 
 
 }
@@ -42,7 +42,7 @@ Port8BitSlow::Port8BitSlow(uint16_t portnumber):Port8Bit(portnumber){
 
 
 }
-Port8BitSlow::~Port8BitSlow();{
+Port8BitSlow::~Port8BitSlow(){
 
 
 }
@@ -61,7 +61,7 @@ Port16Bit::Port16Bit(uint16_t portnumber):Port(portnumber){
 
 
 }
-Port16Bit::~Port16Bit();{
+Port16Bit::~Port16Bit(){
 
 
 }
@@ -86,7 +86,7 @@ Port32Bit::Port32Bit(uint16_t portnumber):Port(portnumber){
 
 
 }
-Port32Bit::~Port32Bit();{
+Port32Bit::~Port32Bit(){
 
 
 }
