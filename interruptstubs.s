@@ -4,6 +4,7 @@
 .section .text
 
 .extern _ZN16InterruptManager15handleInterruptEhj
+
 .global _ZN16InterruptManager22IgnoreInterruptRequestEv
 
 .macro HandleException num

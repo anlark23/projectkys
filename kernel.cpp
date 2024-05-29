@@ -60,6 +60,7 @@ extern "C" void kernelMain(void* multiboot_structure, uint32_t)
 
     interrupts.Activate();
 
+
     while(1);
 
 }
